@@ -1,5 +1,8 @@
 <!-- _includes/quote.html -->
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+
 <style>
+  
   #quote {
     background-color: var(--bg-main);
   }
@@ -311,6 +314,11 @@
         });
         submitBtn.style.display = 'none';
         successEl.style.display = 'block';
+        confetti({
+          particleCount: 200,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
       } catch {
         submitBtn.disabled = false;
         submitBtn.textContent = 'Get My Quote!';
