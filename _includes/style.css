@@ -176,7 +176,7 @@ select{
 .spinner {
   display: inline-block;
   width: 1em; height: 1em;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--secondary-dark);
   border-top-color: transparent;
   border-radius: 50%;
   animation: spin 0.6s linear infinite;
