@@ -1,77 +1,98 @@
 # _config.yml
 
 # Site settings
-title: "Insert Site Title Here"
-description: "Insert site description here."
+title: "Foothills Movers"
+description: "Experience seamless, stress-free relocations in Calgary and surrounding areas."
 url: "https://your-production-url.com"
-baseurl: ""  # e.g. "/blog" if hosted on a subpath
+baseurl: ""  # if you host on a subpath, e.g. "/blog"
 
 # Theming
 theme:
   font:
-    family: "YourFontFamily"
+    family: "Montserrat"
     weights: ["400","600","700"]
 
   border_radius_1: "0.5rem"
   border_radius_2: "50px"
 
   colors:
-    # backgrounds (placeholder grey shades)
-    bg_main:      "#dddddd"
-    bg_secondary: "#cccccc"
-    bg_accent:    "#bbbbbb"
-    bg_light:     "#eeeeee"
-    surface:      "#ffffff"
+  
+    # backgrounds
+    bg_main:         "#333333"
+    bg_secondary:    "#4a4a4a"
+    bg_accent:       "#ff8c00" 
+    bg_light:        "#444444"
+    surface:         "#555555"
 
-    # Primary / Accent (placeholder greys)
-    primary:       "#aaaaaa"
-    primary_light: "#bbbbbb"
-    primary_dark:  "#999999"
+    # Primary / Accent
+    primary:         "#ff8c00"    # your bright orange
+    primary_light:   "#ff9f40"
+    primary_dark:    "#e67e00"
 
-    # Secondary (placeholder greys)
-    secondary:       "#888888"
-    secondary_light: "#777777"
+    # Secondary (if used)
+    secondary:       "#777777"
+    secondary_light: "#888888"
     secondary_dark:  "#666666"
 
     # Text
-    text:         "#000000"
-    text_light:   "#333333"
-    text_dark_bg: "#ffffff"
+    text:            "#ffffff"    # white text on dark bg
+    text_light:      "#cccccc"    # subdued white for hints/placeholder
+    text_dark_bg:    "#222222"    # if you ever need dark text on a light bg
 
     # Accents & states
-    accent:       "#aaaaaa"
-    accent_dark:  "#888888"
-    border:       "#aaaaaa"
-    error:        "#ff4d4d"
-    delete:       "#ff4d4d"
+    accent:          "#ff8c00"    # same as primary
+    accent_dark:     "#e67e00"
+    border:          "#ff8c00"    # for input & button outlines
+    error:           "#ff4d4d"
+    delete:          "#ff4d4d"
 
-    on_primary:  "#ffffff"
-    shadow_sm:   "rgba(0,0,0,0.05)"
-    shadow_md:   "rgba(0,0,0,0.10)"
+    on_primary:      "#ffffff"    # text color on primary buttons
+    shadow_sm:       "rgba(0,0,0,0.05)"
+    shadow_md:       "rgba(0,0,0,0.10)"
 
 # Hero section
 hero:
   description: >
-    Insert hero description here.
+    Experience your next move with Foothills Movers. From packing to storage
+    and every step in between, we ensure a seamless, stress-free relocation in
+    Calgary and the surrounding areas including Okotoks, Cochrane, Airdrie,
+    Banff, and Lethbridge.
   image: "/assets/hero.webp"
 
-# About / Features section
+# Call-to-Action 1 (features/about)
 about:
-  title: "Insert Section Title Here"
+  title: "Why Choose Foothills Movers"
   features:
-    - title: "Feature Title Here"
-      text: "Insert feature description here."
-    - title: "Feature Title Here"
-      text: "Insert feature description here."
+    - title: "Local Expertise"
+      text: >
+        Born and raised in Calgary, our team has intimate knowledge of the city
+        and its surrounding communities. We know how to navigate busy streets,
+        secure parking, and handle buildings safely—ensuring every move is
+        executed with precision and care.
+    - title: "Reliable Service"
+      text: >
+        Punctuality and professionalism are at the heart of everything we do.
+        From the moment you book with us, we arrive on time, treat your
+        belongings with respect, and maintain clear communication throughout
+        your move.
+    - title: "Community Focus"
+      text: >
+        Foothills Movers is built on community values. We proudly support local
+        charities and reinvest in our neighborhoods to give back. Your move
+        helps strengthen the places we all call home.
+    - title: "Smoothest Moves"
+      text: >
+        Our fully equipped trucks, premium packing materials, and experienced
+        crew guarantee a hassle-free experience. Whether you need full-service
+        packing or just heavy-lifting help, we tailor our offerings to your needs.
 
-# Call-to-Action blocks
 cta-1:
-  title: "Insert CTA Title Here"
-  text: "Insert CTA text here."
+  title: "Call To Action Title Here"
+  text: "Replace me with a short call-to-action message."
   button: "Button Text Here"
 
 cta-2:
-  title: "Insert CTA Title Here"
+  title: "Call To Action Title Here"
   button: "Button Text Here"
 
 # Quote form
@@ -101,18 +122,19 @@ quote:
 
 # Contact info
 phone:
-  ie64: "+11234567890"
-  display: "(123) 456-7890"
-  twilio_account_sid: "ACxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-email: "info@yourdomain.com"
+  ie64: "+14035551234"        # no spaces
+  display: "(403) 555-1234"
+  twilio_account_sid: "AC2d402e54f448be3bafcc2cc1df1ddf4f"
+email: "info@foothillsmovers.ca"
 
 address:
-  - "123 Placeholder St"
-  - "Your City, ST ZIP"
+  - "123 Foothills Drive NW"
+  - "Calgary, AB T3A 1X3"
 
 hours:
-  - "Mon–Fri: 7 AM – 9 PM"
-  - "Sat–Sun: 9 AM – 9 PM"
+  - "Mon–Fri: 8 AM – 6 PM"
+  - "Sat: 9 AM – 2 PM"
+  - "Sun: Closed"
 
 # Navigation links
 nav_links:
@@ -125,32 +147,44 @@ nav_links:
   - title: "About Us"
     url: "#about"
 
-# Locations map & data
 locations:
-  #map_theme_url: "OSM Theme URL Here"
-  #map_marker_icon: "fa-solid fa-map-marker-alt"
-  #map_marker_color: "#cccccc"
+  map_theme_url: "https://server.arcgisonline.com/ArcGIS/rest/services/World_Street_Map/MapServer/tile/{z}/{y}/{x}"
+  map_marker_icon: "fa-solid fa-location-dot"
+  map_marker_color: "#ff8c00"
   location_data:
-    - name: "Location Name"
-      coordinates: "0.0000, 0.0000"
-    - name: "Location Name"
-      coordinates: "0.0000, 0.0000"
-
-# FAQ & Moving Tips
-faq_title: "Insert FAQ Section Title Here"
+    - name: "Calgary"
+      coordinates: "51.0447, -114.0719"
+    - name: "Okotoks"
+      coordinates: "50.7237, -113.9825"
+    - name: "Cochrane"
+      coordinates: "51.1889, -114.4645"
+    - name: "Airdrie"
+      coordinates: "51.2918, -114.0134"
+    - name: "Banff"
+      coordinates: "51.1784, -115.5708"
+    - name: "Lethbridge"
+      coordinates: "49.6956, -112.8431"
+    
+faq_title: "FAQs & Moving Tips"
 faq:
-  - question: "Insert question here?"
-    answer: "Insert answer here."
-  - question: "Insert question here?"
-    answer: "Insert answer here."
+  - question: "What is your pricing structure?"
+    answer: "Our pricing is based on the size of the move, distance, and any special handling fees (e.g. pianos). We’ll provide a full breakdown on your estimate."
+  - question: "How do I request a quote?"
+    answer: "Simply fill out the form at the top of the page with your move details and we’ll call or text you back within 1 business day."
+  - question: "What areas do you serve?"
+    answer: "We cover the entire GTA, including Toronto, Mississauga, Brampton, Oakville and surrounding regions."
 
 # Testimonials
 testimonials:
-  - text: "Insert testimonial text here."
-    author: "— Author Name"
-    location: "Location"
+  - text: "Fast, friendly, and professional service from start to finish!"
+    author: "— Alex Johnson"
+    location: "Calgary"
     rating: 5
-  - text: "Insert testimonial text here."
-    author: "— Author Name"
-    location: "Location"
+  - text: "They handled my piano move flawlessly—no damage, on schedule!"
+    author: "— Emily Carter"
+    location: "Okotoks"
     rating: 4.5
+  - text: "Great communication & care. Our office relocation was seamless."
+    author: "— Raj Singh"
+    location: "Airdrie"
+    rating: 5
