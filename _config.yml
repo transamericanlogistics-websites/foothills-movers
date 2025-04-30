@@ -122,9 +122,9 @@ quote:
 
 # Contact info
 phone:
-  ie64: "+14035551234"        # no spaces
-  display: "(403) 555-1234"
-  twilio_account_sid: "AC2d402e54f448be3bafcc2cc1df1ddf4f"
+  ie64: "+15878446683"        # no spaces
+  display: "(587) 844 - 6683"
+  twilio_account_sid: "ACcc9da60ebfd1e331b494cebf68774793"
 email: "info@foothillsmovers.ca"
 
 address:
