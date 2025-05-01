@@ -4,12 +4,7 @@
  * W. https://svgartista.net
  **************************************************/
 
-#hundred-canadian{
-	position: absolute!important;
-	width: 350px!important;
-	left: 225px!important;
-	top: 50px!important;
-}
+
 
 @-webkit-keyframes animate-svg-stroke-1 {
   0% {
