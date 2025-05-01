@@ -5,7 +5,7 @@
  **************************************************/
 
 #hundred-canadian{
-	position: relative!important;
+	position: absolute!important;
 	width: 350px!important;
 	left: 225px!important;
 	top: 50px!important;
