@@ -1,3 +1,9 @@
+.hundred-canadian-leaf {
+  fill: #e00000;
+  stroke-width: 7.5px;
+  stroke: #000000;
+}
+
 .hundred-canadian-numbers, .hundred-canadian-percent-zero, .hundred-canadian-percent-slash {
   fill: #ffffff;
   stroke-width: 7.5px;
@@ -7,13 +13,6 @@
 .hundred-canadian-percent-slash {
   transform-box: fill-box;
   transform-origin: 50% 50%;
-  stroke-width: 7.5px;
-}
-
-.hundred-canadian-leaf {
-  fill: #e00000;
-  stroke-width: 7.5px;
-  stroke: #000000;
 }
 
 @-webkit-keyframes animate-svg-stroke-1 {
