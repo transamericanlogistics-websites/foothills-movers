@@ -1,12 +1,12 @@
 .hundred-canadian-leaf {
   fill: #e00000;
-  stroke-width: 7.5px;
+  stroke-width: 6px;
   stroke: #000000;
 }
 
 .hundred-canadian-numbers, .hundred-canadian-percent-zero, .hundred-canadian-percent-slash {
   fill: #ffffff;
-  stroke-width: 2.5px;
+  stroke-width: 3px;
   stroke: #ffffff;
 }
 
