@@ -1,0 +1,1492 @@
+---
+layout: default
+title: "Christmas Tree Delivery & Removal | Foothills Movers"
+permalink: /christmas/
+---
+
+<style>
+  /* ─────────────────────────────────────────
+     CHRISTMAS PAGE STYLES
+     ───────────────────────────────────────── */
+
+  /* Page wrapper */
+  .christmas-page-main {
+    background: var(--bg-main);
+    color: var(--text);
+  }
+
+  /* Hero */
+  #christmas-hero {
+    background: radial-gradient(circle at top left, var(--primary-dark), var(--bg-secondary));
+    color: var(--text);
+    padding: 4rem 0 3rem;
+  }
+
+  #christmas-hero .hero-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: stretch;
+  }
+
+  #christmas-hero .hero-copy {
+    flex: 1 1 320px;
+  }
+
+  #christmas-hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+  }
+
+  #christmas-hero p.lead {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-light);
+  }
+
+  .christmas-highlight {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1rem;
+  }
+
+  .christmas-highlight i {
+    color: var(--accent);
+  }
+
+  .christmas-steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .christmas-step-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.9rem;
+    border-radius: 999px;
+    background: rgba(0, 0, 0, 0.25);
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+
+  .christmas-step-chip span.step-index {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 999px;
+    background: var(--accent);
+    color: #000;
+    font-weight: var(--font-weight-bold);
+    font-size: 0.8rem;
+  }
+
+  #christmas-hero .hero-tree-card {
+    flex: 1 1 280px;
+  }
+
+  .card-surface {
+    background: var(--surface);
+    border-radius: var(--border-radius-1);
+    box-shadow: 0 3px 10px var(--shadow-sm);
+    padding: 1.5rem;
+  }
+
+  .hero-tree-card .image-wrapper {
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+    background: #111;
+    margin-bottom: 1rem;
+  }
+
+  .hero-tree-card img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+  }
+
+  .hero-tree-card h2 {
+    margin: 0 0 0.5rem;
+    font-size: 1.3rem;
+  }
+
+  .price-tag {
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-light);
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-tree-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0.25rem 0 0;
+    font-size: 0.95rem;
+  }
+
+  .hero-tree-card li {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.35rem;
+    color: var(--text-light);
+  }
+
+  .hero-tree-card li i {
+    color: var(--accent);
+  }
+
+  /* Builder layout */
+  #christmas-builder {
+    background: var(--bg-main);
+  }
+
+  .builder-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+    gap: 2rem;
+    align-items: flex-start;
+  }
+
+  @media (max-width: 960px) {
+    .builder-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .builder-main {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .product-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 0.35rem;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+
+  .product-section h3 i {
+    color: var(--accent);
+  }
+
+  .product-section small.section-subtitle {
+    display: block;
+    color: var(--text-light);
+    margin-bottom: 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .pill-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    color: var(--text-light);
+    margin-left: auto;
+  }
+
+  /* Product grids */
+  .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .product-card {
+    background: var(--surface);
+    border-radius: var(--border-radius-1);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 3px 10px var(--shadow-sm);
+  }
+
+  .product-card .product-media {
+    background: #111;
+    height: 190px;
+    overflow: hidden;
+  }
+
+  .product-card .product-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .product-card .product-body {
+    padding: 1rem 1.1rem 1.2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    flex: 1;
+  }
+
+  .product-card h4 {
+    font-size: 1rem;
+    margin: 0;
+  }
+
+  .product-card p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+
+  .product-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.25rem;
+    font-size: 0.9rem;
+  }
+
+  .product-price {
+    font-weight: var(--font-weight-semibold);
+    color: var(--primary-light);
+  }
+
+  .product-tagline {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-light);
+  }
+
+  .quantity-row {
+    margin-top: 0.75rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .quantity-label {
+    font-size: 0.9rem;
+    color: var(--text-light);
+  }
+
+  .quantity-control {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .quantity-control button {
+    border: none;
+    background: transparent;
+    color: var(--text);
+    padding: 0.35rem 0.7rem;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+
+  .quantity-control button:hover {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .quantity-control input[type="number"] {
+    width: 3rem;
+    text-align: center;
+    border: none;
+    background: transparent;
+    color: var(--text);
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+    -moz-appearance: textfield;
+  }
+
+  .quantity-control input::-webkit-outer-spin-button,
+  .quantity-control input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  /* Single add-on cards */
+  .single-addon {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+  }
+
+  .single-addon .addon-copy {
+    flex: 1 1 220px;
+  }
+
+  .single-addon .addon-media {
+    flex: 0 0 220px;
+  }
+
+  .single-addon .addon-media img {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    border-radius: var(--border-radius-1);
+  }
+
+  .small-note {
+    font-size: 0.85rem;
+    color: var(--text-light);
+    margin-top: 0.5rem;
+  }
+
+  .small-note i {
+    color: var(--accent);
+    margin-right: 0.25rem;
+  }
+
+  /* Toggle switch (for removal) */
+  .switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .switch input {
+    display: none;
+  }
+
+  .switch .slider {
+    width: 42px;
+    height: 24px;
+    border-radius: 999px;
+    background: var(--secondary);
+    position: relative;
+    transition: background 0.2s ease;
+  }
+
+  .switch .slider::before {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    background: #fff;
+    transition: transform 0.2s ease;
+  }
+
+  .switch input:checked + .slider {
+    background: var(--primary);
+  }
+
+  .switch input:checked + .slider::before {
+    transform: translateX(18px);
+  }
+
+  .switch-label-text {
+    font-size: 0.95rem;
+  }
+
+  /* Fields / date wrappers reuse global .field-wrapper */
+  .inline-field {
+    max-width: 280px;
+  }
+
+  .inline-field input[type="date"],
+  .inline-field input[type="text"],
+  .inline-field input[type="tel"],
+  .inline-field input[type="email"],
+  .inline-field textarea {
+    width: 100%;
+    padding: 0.7rem 0.85rem;
+    border-radius: var(--border-radius-2);
+    border: 2px solid var(--border);
+    background: var(--bg-main);
+    color: var(--text);
+    font-family: var(--font-family);
+    font-size: 0.95rem;
+  }
+
+  .inline-field textarea {
+    min-height: 80px;
+    resize: vertical;
+  }
+
+  .inline-field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 0.25rem;
+  }
+
+  .field-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  @media (max-width: 600px) {
+    .inline-field {
+      max-width: 100%;
+    }
+  }
+
+  /* Order summary */
+  .order-summary {
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius-1);
+    box-shadow: 0 3px 12px var(--shadow-md);
+    padding: 1.75rem 1.5rem 1.9rem;
+    position: sticky;
+    top: 5.5rem;
+  }
+
+  .order-summary h2 {
+    font-size: 1.3rem;
+    margin: 0 0 0.3rem;
+  }
+
+  .order-summary .summary-subtitle {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 1.2rem;
+  }
+
+  .summary-items {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .summary-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.6rem 0;
+    font-size: 0.95rem;
+  }
+
+  .summary-item-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .summary-item-name span.meta {
+    font-size: 0.8rem;
+    color: var(--text-light);
+  }
+
+  .summary-item-qty {
+    font-size: 0.85rem;
+    color: var(--text-light);
+  }
+
+  .summary-item-amount {
+    font-weight: var(--font-weight-semibold);
+  }
+
+  .summary-empty {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    padding: 0.75rem 0;
+  }
+
+  .summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-size: 1.05rem;
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 0.35rem;
+  }
+
+  .summary-tax-note {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin-bottom: 1rem;
+  }
+
+  .full-width {
+    width: 100%;
+  }
+
+  .order-summary .btn-primary {
+    width: 100%;
+    margin: 0.3rem 0 0.8rem;
+  }
+
+  .summary-note {
+    font-size: 0.82rem;
+    color: var(--text-light);
+  }
+
+  .summary-note i {
+    color: var(--accent);
+    margin-right: 0.25rem;
+  }
+
+  .success-message {
+    margin-top: 0.75rem;
+    padding: 0.75rem 0.85rem;
+    border-radius: var(--border-radius-1);
+    background: rgba(0, 128, 0, 0.18);
+    border: 1px solid rgba(0, 255, 0, 0.4);
+    font-size: 0.9rem;
+  }
+
+  /* Contact & schedule */
+  .contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    margin-top: 1.25rem;
+  }
+
+  @media (max-width: 960px) {
+    .order-summary {
+      position: static;
+      margin-top: 0.5rem;
+    }
+  }
+</style>
+
+<main class="christmas-page-main">
+  <!-- ─────────────────────────────────────
+       HERO
+       ───────────────────────────────────── -->
+  <section id="christmas-hero">
+    <div class="container hero-grid">
+      <div class="hero-copy">
+        <div class="christmas-highlight">
+          <i class="fa-solid fa-tree"></i>
+          Holiday Help, Handled for You
+        </div>
+        <h1>Christmas Tree Delivery & Holiday Help</h1>
+        <p class="lead">
+          Order your Christmas tree, decorations, wrapping supplies, and
+          even post-holiday removal in one simple booking. We deliver
+          everything, you enjoy the season.
+        </p>
+
+        <p style="font-size:0.95rem; color:var(--text-light); margin-bottom:1.25rem;">
+          Build your perfect Christmas package below, pick a delivery date,
+          and we’ll do the heavy lifting at your doorstep.
+        </p>
+
+        <div class="christmas-steps">
+          <div class="christmas-step-chip">
+            <span class="step-index">1</span>
+            <span>Choose your tree</span>
+          </div>
+          <div class="christmas-step-chip">
+            <span class="step-index">2</span>
+            <span>Add décor & wrapping</span>
+          </div>
+          <div class="christmas-step-chip">
+            <span class="step-index">3</span>
+            <span>Optional stand & removal</span>
+          </div>
+          <div class="christmas-step-chip">
+            <span class="step-index">4</span>
+            <span>Pick your dates & send</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-tree-card card-surface">
+        <div class="image-wrapper">
+          <img
+            src="https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/6B5654D943524B70A00D21B27C0D79CB/10742807_10.jpg"
+            alt="Christmas tree product photo"
+          >
+        </div>
+        <h2>Premium Christmas Tree Delivery</h2>
+        <div class="price-tag">$100 / tree</div>
+        <ul>
+          <li>
+            <i class="fa-solid fa-truck"></i>
+            Delivered straight to your home on your chosen date
+          </li>
+          <li>
+            <i class="fa-solid fa-gifts"></i>
+            Optional décor kits, wrapping paper, and tree stand
+          </li>
+          <li>
+            <i class="fa-solid fa-recycle"></i>
+            Optional tree & garbage removal after the holidays
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─────────────────────────────────────
+       BUILDER + ORDER SUMMARY
+       ───────────────────────────────────── -->
+  <section id="christmas-builder">
+    <div class="container builder-grid">
+      <!-- LEFT: Builder -->
+      <div class="builder-main">
+        <form id="christmas-form" novalidate>
+          <!-- STEP 1: TREE -->
+          <section class="product-section" id="step-tree">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+              <h3>
+                <i class="fa-solid fa-tree"></i>
+                Step 1 — Choose your tree
+              </h3>
+              <span class="pill-label">Required</span>
+            </div>
+            <small class="section-subtitle">
+              Every order starts with at least one Christmas tree.
+            </small>
+
+            <div class="product-card" data-item-id="tree" data-label="Christmas Tree" data-price="100">
+              <div class="product-media">
+                <img
+                  src="https://imgs.michaels.com/MAM/assets/1/5E3C12034D34434F8A9BAAFDDF0F8E1B/img/6B5654D943524B70A00D21B27C0D79CB/10742807_10.jpg"
+                  alt="Christmas tree product photo"
+                >
+              </div>
+              <div class="product-body">
+                <h4>Christmas Tree</h4>
+                <p>Classic full tree, ready for your decorations and holiday photos.</p>
+                <div class="product-meta">
+                  <span class="product-price">$100 / tree</span>
+                  <span class="product-tagline">Delivered to your door</span>
+                </div>
+
+                <div class="quantity-row">
+                  <span class="quantity-label">Number of trees</span>
+                  <div class="quantity-control">
+                    <button
+                      type="button"
+                      data-qty-btn="-1"
+                      data-target="tree"
+                      aria-label="Decrease quantity"
+                    >
+                      −
+                    </button>
+                    <input
+                      type="number"
+                      min="1"
+                      max="10"
+                      value="1"
+                      data-qty-id="tree"
+                      data-label="Christmas Tree"
+                      data-price="100"
+                      aria-label="Tree quantity"
+                      required
+                    >
+                    <button
+                      type="button"
+                      data-qty-btn="1"
+                      data-target="tree"
+                      aria-label="Increase quantity"
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- STEP 2: DECORATION KITS -->
+          <section class="product-section" id="step-decor">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+              <h3>
+                <i class="fa-solid fa-bauble"></i>
+                Step 2 — Add a decoration kit (optional)
+              </h3>
+              <span class="pill-label">Optional</span>
+            </div>
+            <small class="section-subtitle">
+              Choose one or more décor styles to instantly dress your tree.
+            </small>
+
+            <div class="product-grid">
+              <!-- KIT 1 -->
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="https://i5.walmartimages.com/asr/ebbc47be-3105-49b5-9ac5-4685bc729943.d1369696b25fe4d32dac2229daa62ab8.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+                    alt="Warm and cozy ornament kit"
+                  >
+                </div>
+                <div class="product-body">
+                  <h4>Warm & Cozy Kit</h4>
+                  <p>Gold and champagne tones for a warm, elegant glow.</p>
+                  <div class="product-meta">
+                    <span class="product-price">$75 / kit</span>
+                    <span class="product-tagline">Best for cozy living rooms</span>
+                  </div>
+                  <div class="quantity-row">
+                    <span class="quantity-label">Kits</span>
+                    <div class="quantity-control">
+                      <button
+                        type="button"
+                        data-qty-btn="-1"
+                        data-target="decor-warm"
+                        aria-label="Decrease Warm & Cozy kits"
+                      >
+                        −
+                      </button>
+                      <input
+                        type="number"
+                        min="0"
+                        max="10"
+                        value="0"
+                        data-qty-id="decor-warm"
+                        data-label="Warm & Cozy Décor Kit"
+                        data-price="75"
+                        aria-label="Warm & Cozy kit quantity"
+                      >
+                      <button
+                        type="button"
+                        data-qty-btn="1"
+                        data-target="decor-warm"
+                        aria-label="Increase Warm & Cozy kits"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- KIT 2 -->
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="https://i5.walmartimages.com/asr/122f49e8-6d74-42d8-a71b-0452c6662445.b470895450207169ee10d8faedbe7a71.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+                    alt="Classic red and gold ornament kit"
+                  >
+                </div>
+                <div class="product-body">
+                  <h4>Classic Red & Gold Kit</h4>
+                  <p>The traditional Christmas look, bold reds and rich gold accents.</p>
+                  <div class="product-meta">
+                    <span class="product-price">$75 / kit</span>
+                    <span class="product-tagline">Timeless holiday look</span>
+                  </div>
+                  <div class="quantity-row">
+                    <span class="quantity-label">Kits</span>
+                    <div class="quantity-control">
+                      <button
+                        type="button"
+                        data-qty-btn="-1"
+                        data-target="decor-classic"
+                        aria-label="Decrease Classic Red & Gold kits"
+                      >
+                        −
+                      </button>
+                      <input
+                        type="number"
+                        min="0"
+                        max="10"
+                        value="0"
+                        data-qty-id="decor-classic"
+                        data-label="Classic Red & Gold Décor Kit"
+                        data-price="75"
+                        aria-label="Classic Red & Gold kit quantity"
+                      >
+                      <button
+                        type="button"
+                        data-qty-btn="1"
+                        data-target="decor-classic"
+                        aria-label="Increase Classic Red & Gold kits"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- KIT 3 -->
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="https://i5.walmartimages.com/asr/9b93cb9f-0715-426a-b181-318304d404b2.4f4a7d3519763ccbea23f115382bec81.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+                    alt="Snowy white ornament kit"
+                  >
+                </div>
+                <div class="product-body">
+                  <h4>Snowy Whites Kit</h4>
+                  <p>Soft white and silver ornaments for a clean, wintery feel.</p>
+                  <div class="product-meta">
+                    <span class="product-price">$75 / kit</span>
+                    <span class="product-tagline">Modern & bright</span>
+                  </div>
+                  <div class="quantity-row">
+                    <span class="quantity-label">Kits</span>
+                    <div class="quantity-control">
+                      <button
+                        type="button"
+                        data-qty-btn="-1"
+                        data-target="decor-snowy"
+                        aria-label="Decrease Snowy Whites kits"
+                      >
+                        −
+                      </button>
+                      <input
+                        type="number"
+                        min="0"
+                        max="10"
+                        value="0"
+                        data-qty-id="decor-snowy"
+                        data-label="Snowy Whites Décor Kit"
+                        data-price="75"
+                        aria-label="Snowy Whites kit quantity"
+                      >
+                      <button
+                        type="button"
+                        data-qty-btn="1"
+                        data-target="decor-snowy"
+                        aria-label="Increase Snowy Whites kits"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- STEP 3: WRAPPING PAPER -->
+          <section class="product-section" id="step-wrap">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+              <h3>
+                <i class="fa-solid fa-gift"></i>
+                Step 3 — Add wrapping paper (optional)
+              </h3>
+              <span class="pill-label">Optional</span>
+            </div>
+            <small class="section-subtitle">
+              Stock up on matching gift wrap with your delivery.
+            </small>
+
+            <div class="product-grid">
+              <!-- WRAP 1 -->
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="https://i5.walmartimages.com/asr/ac170400-e385-471a-84d8-919e883c5420.f9deebf3aeadf187cee3a0bf22b889bf.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+                    alt="Wrappings set 1"
+                  >
+                </div>
+                <div class="product-body">
+                  <h4>Festive Mix Wrap Set</h4>
+                  <p>Coordinated patterns to cover a wide range of gifts.</p>
+                  <div class="product-meta">
+                    <span class="product-price">$25 / set</span>
+                    <span class="product-tagline">Great all-rounder</span>
+                  </div>
+                  <div class="quantity-row">
+                    <span class="quantity-label">Sets</span>
+                    <div class="quantity-control">
+                      <button
+                        type="button"
+                        data-qty-btn="-1"
+                        data-target="wrap-festive"
+                        aria-label="Decrease Festive Mix wrap sets"
+                      >
+                        −
+                      </button>
+                      <input
+                        type="number"
+                        min="0"
+                        max="10"
+                        value="0"
+                        data-qty-id="wrap-festive"
+                        data-label="Festive Mix Wrap Set"
+                        data-price="25"
+                        aria-label="Festive Mix wrap set quantity"
+                      >
+                      <button
+                        type="button"
+                        data-qty-btn="1"
+                        data-target="wrap-festive"
+                        aria-label="Increase Festive Mix wrap sets"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- WRAP 2 -->
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="https://i5.walmartimages.com/asr/680c6d91-8096-43b5-831d-2079b8ae9379.39c9562a42191c8238c17002cbd730b2.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+                    alt="Wrappings set 2"
+                  >
+                </div>
+                <div class="product-body">
+                  <h4>Red & Gold Wrap Set</h4>
+                  <p>Rich colours to match traditional décor and ornaments.</p>
+                  <div class="product-meta">
+                    <span class="product-price">$25 / set</span>
+                    <span class="product-tagline">Classic look</span>
+                  </div>
+                  <div class="quantity-row">
+                    <span class="quantity-label">Sets</span>
+                    <div class="quantity-control">
+                      <button
+                        type="button"
+                        data-qty-btn="-1"
+                        data-target="wrap-classic"
+                        aria-label="Decrease Red & Gold wrap sets"
+                      >
+                        −
+                      </button>
+                      <input
+                        type="number"
+                        min="0"
+                        max="10"
+                        value="0"
+                        data-qty-id="wrap-classic"
+                        data-label="Red & Gold Wrap Set"
+                        data-price="25"
+                        aria-label="Red & Gold wrap set quantity"
+                      >
+                      <button
+                        type="button"
+                        data-qty-btn="1"
+                        data-target="wrap-classic"
+                        aria-label="Increase Red & Gold wrap sets"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+
+              <!-- WRAP 3 -->
+              <article class="product-card">
+                <div class="product-media">
+                  <img
+                    src="https://i5.walmartimages.com/asr/cedcac02-375a-4ee3-9ed0-368f0df27645.9f1939a2b1825054093aec8c8c43e5a3.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+                    alt="Wrappings set 3"
+                  >
+                </div>
+                <div class="product-body">
+                  <h4>Snowy Patterns Wrap Set</h4>
+                  <p>Cool-toned papers to pair with modern or snowy décor.</p>
+                  <div class="product-meta">
+                    <span class="product-price">$25 / set</span>
+                    <span class="product-tagline">Crisp & modern</span>
+                  </div>
+                  <div class="quantity-row">
+                    <span class="quantity-label">Sets</span>
+                    <div class="quantity-control">
+                      <button
+                        type="button"
+                        data-qty-btn="-1"
+                        data-target="wrap-snowy"
+                        aria-label="Decrease Snowy Patterns wrap sets"
+                      >
+                        −
+                      </button>
+                      <input
+                        type="number"
+                        min="0"
+                        max="10"
+                        value="0"
+                        data-qty-id="wrap-snowy"
+                        data-label="Snowy Patterns Wrap Set"
+                        data-price="25"
+                        aria-label="Snowy Patterns wrap set quantity"
+                      >
+                      <button
+                        type="button"
+                        data-qty-btn="1"
+                        data-target="wrap-snowy"
+                        aria-label="Increase Snowy Patterns wrap sets"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- STEP 4: STAND + REMOVAL -->
+          <section class="product-section" id="step-addons">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+              <h3>
+                <i class="fa-solid fa-plus-circle"></i>
+                Step 4 — Add-ons
+              </h3>
+              <span class="pill-label">Optional</span>
+            </div>
+            <small class="section-subtitle">
+              Add a tree stand and schedule tree removal after the holidays.
+            </small>
+
+            <!-- Tree base -->
+            <div class="card-surface" style="margin-bottom:1.75rem;">
+              <div class="single-addon">
+                <div class="addon-media">
+                  <img
+                    src="https://i5.walmartimages.com/asr/fcf99324-3b61-4ccb-8953-7026422f9397.20c7387cc105324cb5d0bd269c94a39f.jpeg?odnHeight=2000&odnWidth=2000&odnBg=FFFFFF"
+                    alt="Christmas tree stand product photo"
+                  >
+                </div>
+                <div class="addon-copy">
+                  <h4>Christmas Tree Stand</h4>
+                  <div class="price-tag">$25 / stand</div>
+                  <p style="font-size:0.9rem; color:var(--text-light); margin-bottom:0.75rem;">
+                    Sturdy stand to keep your tree upright and secure for the whole season.
+                  </p>
+                  <div class="quantity-row">
+                    <span class="quantity-label">Stands</span>
+                    <div class="quantity-control">
+                      <button
+                        type="button"
+                        data-qty-btn="-1"
+                        data-target="stand"
+                        aria-label="Decrease tree stands"
+                      >
+                        −
+                      </button>
+                      <input
+                        type="number"
+                        min="0"
+                        max="10"
+                        value="0"
+                        data-qty-id="stand"
+                        data-label="Christmas Tree Stand"
+                        data-price="25"
+                        aria-label="Tree stand quantity"
+                      >
+                      <button
+                        type="button"
+                        data-qty-btn="1"
+                        data-target="stand"
+                        aria-label="Increase tree stands"
+                      >
+                        +
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tree removal -->
+            <div class="card-surface" id="removal-card" data-label="Tree Removal & Garbage Pickup" data-price="150">
+              <div class="single-addon">
+                <div class="addon-media">
+                  <img
+                    src="https://www.delta.ca/sites/default/files/styles/large/public/2024-12/WN-Christmas%20Tree%20Chipping.jpg?itok=g0sdV7IS"
+                    alt="Christmas tree removal and chipping service photo"
+                  >
+                </div>
+                <div class="addon-copy">
+                  <h4>Tree Removal + Garbage Pickup</h4>
+                  <div class="price-tag">$150 flat</div>
+                  <p style="font-size:0.9rem; color:var(--text-light); margin-bottom:0.6rem;">
+                    After the holidays, we’ll take care of the tree and up to
+                    three bags of wrapping and packaging garbage.
+                  </p>
+
+                  <label class="switch">
+                    <input type="checkbox" id="removal-toggle">
+                    <span class="slider"></span>
+                    <span class="switch-label-text">
+                      Add tree removal & garbage pickup
+                    </span>
+                  </label>
+
+                  <p class="small-note">
+                    <i class="fa-solid fa-circle-info"></i>
+                    On removal day you can either be home, or leave the tree and
+                    garbage bags by your front porch/front of house for pickup.
+                  </p>
+
+                  <div id="removal-date-row" class="field-row" style="margin-top:0.9rem; display:none;">
+                    <div class="inline-field">
+                      <label for="removal-date">
+                        Removal date <span style="color:var(--accent)">*</span>
+                      </label>
+                      <input
+                        type="date"
+                        id="removal-date"
+                        name="removal_date"
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Divider -->
+          <div class="section-divider"></div>
+
+          <!-- STEP 5: DETAILS & SCHEDULE -->
+          <section class="product-section" id="step-details">
+            <div style="display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem;">
+              <h3>
+                <i class="fa-solid fa-clipboard-list"></i>
+                Step 5 — Delivery details & schedule
+              </h3>
+              <span class="pill-label">Required</span>
+            </div>
+            <small class="section-subtitle">
+              Tell us where to deliver your Christmas package and when.
+            </small>
+
+            <div class="field-row" style="margin-bottom:1rem;">
+              <div class="inline-field">
+                <label for="delivery-date">
+                  Tree delivery date <span style="color:var(--accent)">*</span>
+                </label>
+                <input
+                  type="date"
+                  id="delivery-date"
+                  name="delivery_date"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="contact-grid">
+              <div class="inline-field">
+                <label for="name">
+                  Name <span style="color:var(--accent)">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Full name"
+                  required
+                >
+              </div>
+              <div class="inline-field">
+                <label for="phone">
+                  Phone <span style="color:var(--accent)">*</span>
+                </label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  placeholder="+1 (###) ###-####"
+                  required
+                >
+              </div>
+              <div class="inline-field">
+                <label for="email">
+                  Email <span style="color:var(--accent)">*</span>
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                >
+              </div>
+              <div class="inline-field">
+                <label for="address">
+                  Delivery address <span style="color:var(--accent)">*</span>
+                </label>
+                <input
+                  type="text"
+                  id="address"
+                  name="address"
+                  placeholder="Street, city, postal code"
+                  required
+                >
+              </div>
+            </div>
+
+            <div class="field-row" style="margin-top:1rem;">
+              <div class="inline-field" style="flex:1 1 100%;">
+                <label for="notes">Notes for our team (optional)</label>
+                <textarea
+                  id="notes"
+                  name="notes"
+                  placeholder="Gate code, parking notes, preferred time of day, etc."
+                ></textarea>
+              </div>
+            </div>
+          </section>
+        </form>
+      </div>
+
+      <!-- RIGHT: Summary -->
+      <aside class="order-summary" aria-label="Order summary">
+        <h2>Your Christmas package</h2>
+        <p class="summary-subtitle">
+          Quantities and options update your total automatically.
+        </p>
+
+        <ul id="order-summary-items" class="summary-items"></ul>
+
+        <div class="summary-total">
+          <span>Total (before tax)</span>
+          <span id="order-total">$0.00</span>
+        </div>
+        <div class="summary-tax-note">
+          Taxes and exact fees will be confirmed before payment.
+        </div>
+
+        <button
+          type="submit"
+          form="christmas-form"
+          class="btn-primary full-width"
+          id="christmas-submit"
+        >
+          <i class="fa-solid fa-paper-plane"></i>
+          Request My Christmas Package
+        </button>
+
+        <p class="summary-note">
+          <i class="fa-solid fa-lock"></i>
+          No payment is taken on this page. A team member will confirm your
+          order details and then send a secure payment link or process
+          payment by phone once everything is approved.
+        </p>
+
+        <div
+          id="christmas-success"
+          class="success-message"
+          hidden
+        >
+          Thank you! Your Christmas package request has been received.
+          We’ll review your selections, confirm availability, and contact you
+          shortly to finalize payment and timing.
+        </div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const money = (amount) => {
+      return '$' + amount.toFixed(2);
+    };
+
+    const qtyInputs = document.querySelectorAll('[data-qty-id]');
+    const buttons = document.querySelectorAll('[data-qty-btn]');
+    const summaryList = document.getElementById('order-summary-items');
+    const totalEl = document.getElementById('order-total');
+    const removalToggle = document.getElementById('removal-toggle');
+    const removalDateRow = document.getElementById('removal-date-row');
+    const removalDateInput = document.getElementById('removal-date');
+    const removalCard = document.getElementById('removal-card');
+    const form = document.getElementById('christmas-form');
+    const submitBtn = document.getElementById('christmas-submit');
+    const successEl = document.getElementById('christmas-success');
+
+    // Clamp helper
+    function clamp(value, min, max) {
+      const n = isNaN(value) ? 0 : value;
+      return Math.min(max, Math.max(min, n));
+    }
+
+    function getQtyMap() {
+      const map = {};
+      qtyInputs.forEach((input) => {
+        const id = input.dataset.qtyId;
+        const min = parseInt(input.min || '0', 10);
+        const max = parseInt(input.max || '999', 10);
+        const value = clamp(parseInt(input.value || '0', 10), min, max);
+        input.value = value; // normalize UI
+        map[id] = {
+          id,
+          label: input.dataset.label || '',
+          price: parseFloat(input.dataset.price || '0'),
+          qty: value,
+        };
+      });
+      return map;
+    }
+
+    function updateSummary() {
+      const qtyMap = getQtyMap();
+      let total = 0;
+      summaryList.innerHTML = '';
+
+      const addLine = (label, unitPrice, qty, metaText) => {
+        const lineTotal = unitPrice * qty;
+        total += lineTotal;
+
+        const li = document.createElement('li');
+        li.className = 'summary-item';
+        li.innerHTML = `
+          <div class="summary-item-name">
+            <span>${label}</span>
+            ${metaText ? `<span class="meta">${metaText}</span>` : ''}
+          </div>
+          <div style="text-align:right;">
+            <div class="summary-item-qty">${qty} × ${money(unitPrice)}</div>
+            <div class="summary-item-amount">${money(lineTotal)}</div>
+          </div>
+        `;
+        summaryList.appendChild(li);
+      };
+
+      // Tree (required)
+      const tree = qtyMap['tree'];
+      if (tree && tree.qty > 0) {
+        addLine(tree.label, tree.price, tree.qty, 'Delivered on your chosen date');
+      }
+
+      // Décor & wrapping & stand
+      Object.values(qtyMap).forEach((item) => {
+        if (!item || item.id === 'tree') return;
+        if (item.qty <= 0) return;
+
+        addLine(item.label, item.price, item.qty, null);
+      });
+
+      // Removal
+      if (removalToggle && removalToggle.checked && removalCard) {
+        const label = removalCard.dataset.label || 'Tree Removal & Garbage Pickup';
+        const price = parseFloat(removalCard.dataset.price || '150');
+        const removalDate = removalDateInput.value
+          ? new Date(removalDateInput.value).toLocaleDateString()
+          : null;
+        const meta = removalDate
+          ? `Scheduled removal date: ${removalDate}`
+          : 'Removal date to be confirmed';
+        addLine(label, price, 1, meta);
+      }
+
+      if (!summaryList.children.length) {
+        const li = document.createElement('li');
+        li.className = 'summary-empty';
+        li.textContent = 'Add items on the left to see your total.';
+        summaryList.appendChild(li);
+      }
+
+      totalEl.textContent = money(total);
+    }
+
+    // Attach quantity button handlers
+    buttons.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const targetId = btn.dataset.target;
+        const delta = parseInt(btn.dataset.qtyBtn || '0', 10);
+        const input = document.querySelector(`[data-qty-id="${targetId}"]`);
+        if (!input) return;
+
+        const min = parseInt(input.min || '0', 10);
+        const max = parseInt(input.max || '999', 10);
+        const value = clamp(parseInt(input.value || '0', 10) + delta, min, max);
+        input.value = value;
+        updateSummary();
+      });
+    });
+
+    // Direct typing in quantity fields
+    qtyInputs.forEach((input) => {
+      input.addEventListener('input', () => {
+        updateSummary();
+      });
+      input.addEventListener('blur', () => {
+        // normalize on blur
+        const min = parseInt(input.min || '0', 10);
+        const max = parseInt(input.max || '999', 10);
+        input.value = clamp(parseInt(input.value || '0', 10), min, max);
+        updateSummary();
+      });
+    });
+
+    // Removal toggle
+    if (removalToggle) {
+      removalToggle.addEventListener('change', () => {
+        if (removalToggle.checked) {
+          removalDateRow.style.display = 'flex';
+          removalDateInput.required = true;
+        } else {
+          removalDateRow.style.display = 'none';
+          removalDateInput.required = false;
+          removalDateInput.value = '';
+        }
+        updateSummary();
+      });
+    }
+
+    // Keep summary date meta up to date
+    if (removalDateInput) {
+      removalDateInput.addEventListener('change', updateSummary);
+    }
+
+    // Form submission (no backend yet – UI only)
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      // Basic browser validation
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // Make sure at least 1 tree
+      const treeInput = document.querySelector('[data-qty-id="tree"]');
+      if (!treeInput || parseInt(treeInput.value || '0', 10) < 1) {
+        alert('Please select at least one tree to continue.');
+        treeInput && treeInput.focus();
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = '<span class="spinner"></span> Sending...';
+
+      // Simulate success UI (you can replace with real fetch/Stripe later)
+      setTimeout(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Request My Christmas Package';
+        successEl.hidden = false;
+        successEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 600);
+    });
+
+    // Initial summary
+    updateSummary();
+  });
+</script>
