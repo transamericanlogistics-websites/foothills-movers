@@ -12,6 +12,9 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+  {% include nav.html %}
+  {{ content }}
+  {% include footer.html %}
   <canvas id="canvas"></canvas>
   <script>
     
@@ -129,8 +132,5 @@
     init();
     
   </script>
-  {% include nav.html %}
-  {{ content }}
-  {% include footer.html %}
 </body>
 </html>
