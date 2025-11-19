@@ -17,7 +17,7 @@
   {% include footer.html %}
   
   <script>
-  (function () {
+  function () {
     // Create the canvas and overlay it on the whole page
     var canvas = document.createElement('canvas');
     canvas.id = 'snow-canvas';
@@ -97,7 +97,7 @@
   
     createFlakes();
     drawFlakes();
-  })();
+  };
   </script>
 
 </body>
