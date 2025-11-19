@@ -15,6 +15,21 @@
   {% include nav.html %}
   {{ content }}
   {% include footer.html %}
+  <style>
+    #canvas {
+      position: fixed;      /* sits on top of the page */
+      top: 0;
+      left: 0;
+      width: 100vw;         /* full viewport width */
+      height: 100vh;        /* full viewport height */
+      pointer-events: none; /* so you can still click links/buttons under it */
+      z-index: 1;           /* adjust up/down as needed */
+    }
+    body > *:not(#canvas) {
+      position: relative;
+      z-index: 2;
+    }
+  </style>
   <canvas id="canvas"></canvas>
   <script>
     
