@@ -5,106 +5,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>{{ page.title | default: site.title }}</title>
+
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/animation.css">
   <link rel="stylesheet" href="/assets/css/100_canadian.css">
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
-<body>
-  {% include nav.html %}
-  {{ content }}
-  {% include footer.html %}
+
   <style>
-    #canvas {
-      position: fixed;      /* sits on top of the page */
-      top: 0;
-      left: 0;
-      width: 100vw;         /* full viewport width */
-      height: 100vh;        /* full viewport height */
-      pointer-events: none; /* so you can still click links/buttons under it */
-      z-index: 1;           /* adjust up/down as needed */
+    /* Snow canvas overlay */
+    #snow-canvas {
+      position: fixed;
+      inset: 0;             /* top:0; right:0; bottom:0; left:0 */
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none; /* don’t block clicks on links/buttons */
+      z-index: 1;
     }
-    body > *:not(#canvas) {
+
+    /* Ensure the actual site content is above the canvas */
+    #page-wrapper {
       position: relative;
       z-index: 2;
     }
+
+    /* Optional: remove body margin to avoid weird gaps */
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
   </style>
-  <canvas id="canvas"></canvas>
+</head>
+<body>
+  <!-- Snow overlay canvas -->
+  <canvas id="snow-canvas"></canvas>
+
+  <!-- All your normal site content lives in here -->
+  <div id="page-wrapper">
+    {% include nav.html %}
+    {{ content }}
+    {% include footer.html %}
+  </div>
+
   <script>
-    
-    (function() {
-        var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame ||
-        function(callback) {
-            window.setTimeout(callback, 1000 / 60);
-        };
-        window.requestAnimationFrame = requestAnimationFrame;
+    (function () {
+      // Simple rAF polyfill
+      var raf = window.requestAnimationFrame       ||
+                window.mozRequestAnimationFrame    ||
+                window.webkitRequestAnimationFrame ||
+                window.msRequestAnimationFrame     ||
+                function (cb) { return setTimeout(cb, 1000 / 60); };
+
+      window.requestAnimationFrame = raf;
     })();
-    
-    
-    var flakes = [],
-        canvas = document.getElementById("canvas"),
-        ctx = canvas.getContext("2d"),
-        flakeCount = 200,
-        mX = -100,
-        mY = -100
-    
+
+    (function () {
+      var canvas = document.getElementById('snow-canvas');
+      if (!canvas) return; // safety guard
+
+      var ctx = canvas.getContext('2d');
+      var flakes = [];
+      var flakeCount = 200;
+      var mX = -100;
+      var mY = -100;
+
+      function resizeCanvas() {
         canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-    
-    function snow() {
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
-    
-        for (var i = 0; i < flakeCount; i++) {
-            var flake = flakes[i],
-                x = mX,
-                y = mY,
-                minDist = 150,
-                x2 = flake.x,
-                y2 = flake.y;
-    
-            var dist = Math.sqrt((x2 - x) * (x2 - x) + (y2 - y) * (y2 - y)),
-                dx = x2 - x,
-                dy = y2 - y;
-    
-            if (dist < minDist) {
-                var force = minDist / (dist * dist),
-                    xcomp = (x - x2) / dist,
-                    ycomp = (y - y2) / dist,
-                    deltaV = force / 2;
-    
-                flake.velX -= deltaV * xcomp;
-                flake.velY -= deltaV * ycomp;
-    
-            } else {
-                flake.velX *= .98;
-                if (flake.velY <= flake.speed) {
-                    flake.velY = flake.speed
-                }
-                flake.velX += Math.cos(flake.step += .05) * flake.stepSize;
-            }
-    
-            ctx.fillStyle = "rgba(255,255,255," + flake.opacity + ")";
-            flake.y += flake.velY;
-            flake.x += flake.velX;
-    
-            if (flake.y >= canvas.height || flake.y <= 0) {
-                reset(flake);
-            }
-    
-    
-            if (flake.x >= canvas.width || flake.x <= 0) {
-                reset(flake);
-            }
-    
-            ctx.beginPath();
-            ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
-            ctx.fill();
-        }
-        requestAnimationFrame(snow);
-    };
-    
-    function reset(flake) {
+        canvas.height = window.innerHeight;
+      }
+
+      // Initial size + resize listener
+      resizeCanvas();
+      window.addEventListener('resize', resizeCanvas);
+
+      function reset(flake) {
         flake.x = Math.floor(Math.random() * canvas.width);
         flake.y = 0;
         flake.size = (Math.random() * 3) + 2;
@@ -112,40 +86,90 @@
         flake.velY = flake.speed;
         flake.velX = 0;
         flake.opacity = (Math.random() * 0.5) + 0.3;
-    }
-    
-    function init() {
+      }
+
+      function initFlakes() {
+        flakes = [];
         for (var i = 0; i < flakeCount; i++) {
-            var x = Math.floor(Math.random() * canvas.width),
-                y = Math.floor(Math.random() * canvas.height),
-                size = (Math.random() * 3) + 2,
-                speed = (Math.random() * 1) + 0.5,
-                opacity = (Math.random() * 0.5) + 0.3;
-    
-            flakes.push({
-                speed: speed,
-                velY: speed,
-                velX: 0,
-                x: x,
-                y: y,
-                size: size,
-                stepSize: (Math.random()) / 30,
-                step: 0,
-                angle: 180,
-                opacity: opacity
-            });
+          var x = Math.floor(Math.random() * canvas.width);
+          var y = Math.floor(Math.random() * canvas.height);
+          var size = (Math.random() * 3) + 2;
+          var speed = (Math.random() * 1) + 0.5;
+          var opacity = (Math.random() * 0.5) + 0.3;
+
+          flakes.push({
+            x: x,
+            y: y,
+            size: size,
+            speed: speed,
+            velY: speed,
+            velX: 0,
+            stepSize: (Math.random()) / 30,
+            step: 0,
+            angle: 180,
+            opacity: opacity
+          });
         }
-    
-        snow();
-    };
-    
-    canvas.addEventListener("mousemove", function(e) {
-        mX = e.clientX,
-        mY = e.clientY
-    });
-    
-    init();
-    
+      }
+
+      function snow() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        for (var i = 0; i < flakes.length; i++) {
+          var flake = flakes[i];
+          var x = mX;
+          var y = mY;
+          var minDist = 150;
+          var x2 = flake.x;
+          var y2 = flake.y;
+
+          var dx = x2 - x;
+          var dy = y2 - y;
+          var dist = Math.sqrt(dx * dx + dy * dy);
+
+          if (dist < minDist) {
+            var force = minDist / (dist * dist);
+            var xcomp = (x - x2) / dist;
+            var ycomp = (y - y2) / dist;
+            var deltaV = force / 2;
+
+            flake.velX -= deltaV * xcomp;
+            flake.velY -= deltaV * ycomp;
+          } else {
+            flake.velX *= 0.98;
+            if (flake.velY <= flake.speed) {
+              flake.velY = flake.speed;
+            }
+            flake.velX += Math.cos(flake.step += 0.05) * flake.stepSize;
+          }
+
+          flake.y += flake.velY;
+          flake.x += flake.velX;
+
+          if (flake.y >= canvas.height || flake.y <= 0) {
+            reset(flake);
+          }
+          if (flake.x >= canvas.width || flake.x <= 0) {
+            reset(flake);
+          }
+
+          ctx.beginPath();
+          ctx.fillStyle = 'rgba(255,255,255,' + flake.opacity + ')';
+          ctx.arc(flake.x, flake.y, flake.size, 0, Math.PI * 2);
+          ctx.fill();
+        }
+
+        requestAnimationFrame(snow);
+      }
+
+      canvas.addEventListener('mousemove', function (e) {
+        mX = e.clientX;
+        mY = e.clientY;
+      });
+
+      initFlakes();
+      snow();
+    })();
   </script>
 </body>
 </html>
